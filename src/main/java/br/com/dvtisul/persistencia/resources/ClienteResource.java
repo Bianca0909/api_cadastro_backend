@@ -1,6 +1,7 @@
 package br.com.dvtisul.persistencia.resources;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,6 +32,11 @@ public class ClienteResource {
 	@GetMapping
 	public List<Cliente> listarTodos() {
 		return clienteService.listarTodos();
+	}
+	
+	@GetMapping("/{id}")
+	public Optional<Cliente> listarPorId(@PathVariable("id") Integer id) {
+		return clienteService.listarPorId(id);
 	}
 
 	@DeleteMapping("/{id}")

@@ -1,6 +1,7 @@
 package br.com.dvtisul.persistencia.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,5 +31,9 @@ public class ClienteService {
 	
 	public Cliente alterar(Cliente c) {
 		return clienteRepository.save(c);
+	}
+	
+	public Optional<Cliente> listarPorId(Integer id) {
+		return clienteRepository.findById(id);
 	}
 }
