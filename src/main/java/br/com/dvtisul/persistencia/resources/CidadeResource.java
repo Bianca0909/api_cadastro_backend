@@ -38,7 +38,7 @@ public class CidadeResource {
 		return cidadeService.excluir(id);
 	}
 
-	@PutMapping
+	@PutMapping("/{id}")
 	public Cidade alterarCidade(@RequestBody Cidade c, @RequestParam("id") Integer id) {
 		c.setId(id);
 		return cidadeService.alterar(c);

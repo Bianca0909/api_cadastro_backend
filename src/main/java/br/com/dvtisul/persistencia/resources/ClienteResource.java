@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,7 +44,7 @@ public class ClienteResource {
 	public Cliente excluirCliente(@PathVariable("id") Integer id) {
 		return clienteService.excluir(id);
 	}
-
+	
 	@PutMapping
 	public Cliente alterarCliente(@RequestBody Cliente c, @RequestParam("id") Integer id) {
 		c.setId(id);
