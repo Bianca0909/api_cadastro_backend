@@ -12,5 +12,4 @@ import br.com.dvtisul.persistencia.model.Cidade;
 public interface CidadeRepository extends JpaRepository<Cidade, Integer>{
 		
 	public List<Cidade> findByUf(String uf);
-	public List<Cidade> findByNome(String nome);
 }

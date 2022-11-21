@@ -28,7 +28,7 @@ public class SpringfoxConfig {
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("API para persistência de clientes e cidades").description("Lorem ipson")
+		return new ApiInfoBuilder().title("API para persistência de clientes e cidades").description("Trabalho avaliativo final para a conclusão do curso DEVTISUL \n" + "API criada em JAVA Spring")
 				.version("1.0.0").license("Apache License Version 2.0")
 				.licenseUrl("https://www.apache.org/licenses/LICENSE-2.0")
 				.contact(new Contact("Bianca Medeiros", "https://github.com/Bianca0909", "biancamedeiros0909@gmail.com"))

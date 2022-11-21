@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.dvtisul.persistencia.model.Cidade;
 import br.com.dvtisul.persistencia.model.Cliente;
 import br.com.dvtisul.persistencia.repositories.ClienteRepository;
 
@@ -35,5 +36,9 @@ public class ClienteService {
 	
 	public Optional<Cliente> listarPorId(Integer id) {
 		return clienteRepository.findById(id);
+	}
+	
+	public List<Cliente> listarPorCidade(Cidade cidade) {
+		return clienteRepository.findByCidade(cidade);
 	}
 }

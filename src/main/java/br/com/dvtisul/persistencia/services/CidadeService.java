@@ -35,7 +35,4 @@ public class CidadeService {
 		return cidadeRepository.findByUf(uf);
 	}
 	
-	public List<Cidade> buscarPorNome(String nome) {
-		return cidadeRepository.findByNome(nome);
-	}
 }

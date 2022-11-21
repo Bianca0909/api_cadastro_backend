@@ -9,16 +9,23 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class Cidade implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ApiModelProperty(value = "Código identificador da cidade")
 	private Integer id;
+	
 	@Column
+	@ApiModelProperty(value = "Nome da cidade")
 	private String nome;
+	
 	@Column
+	@ApiModelProperty(value = "Unidade federal da cidade")
 	private String uf;
 	
 	public Cidade() {
