@@ -66,7 +66,7 @@ public class CidadeResource {
 		return cidadeService.excluir(id);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping
 	@ApiOperation(value = "Alterar registro de uma cidade do banco de dados")
 	@ApiResponses(value = { 
 			@ApiResponse(code = 200, message = "Cliente alterado com sucesso"),
